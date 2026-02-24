@@ -1,0 +1,1 @@
+{"version":3,"file":"trip-note.entity.d.ts","sourceRoot":"","sources":["../../src/entities/trip-note.entity.ts"],"names":[],"mappings":"AASA,OAAO,EAAE,IAAI,EAAE,MAAM,eAAe,CAAC;AAErC,qBACa,QAAQ;IAEjB,EAAE,EAAE,MAAM,CAAC;IAGX,MAAM,EAAE,MAAM,CAAC;IAGf,OAAO,EAAE,MAAM,CAAC;IAGhB,QAAQ,EAAE,OAAO,CAAC;IAGlB,SAAS,EAAE,IAAI,CAAC;IAGhB,SAAS,EAAE,IAAI,CAAC;IAIhB,IAAI,EAAE,IAAI,CAAC;CACd"}

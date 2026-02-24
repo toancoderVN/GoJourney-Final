@@ -1,0 +1,1137 @@
+[33mWARNING[0m:  [12-01-2026 21:27:56] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-01-2026 21:27:56] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component System
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:27:56] Starting component SegmentAPI
+[32mINFO[0m:     [12-01-2026 21:27:56] Started server process [[36m4696[0m]
+[32mINFO[0m:     [12-01-2026 21:27:56] Waiting for application startup.
+[32mINFO[0m:     [12-01-2026 21:27:56] Application startup complete.
+[32mINFO[0m:     [12-01-2026 21:27:56] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[31mERROR[0m:    [12-01-2026 21:29:01] no such column: collections.topic
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    |     return await future
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    |     result = context.run(func, *args)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    |     return self._api.list_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    |     db_collections = self._sysdb.get_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    |     rows = cur.execute(sql, params).fetchall()
+    | sqlite3.OperationalError: no such column: collections.topic
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    return self._api.list_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    db_collections = self._sysdb.get_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    rows = cur.execute(sql, params).fetchall()
+sqlite3.OperationalError: no such column: collections.topic
+[32mINFO[0m:     [12-01-2026 21:29:01] ::1:50438 - "GET /api/v1/collections HTTP/1.1" 500
+[31mERROR[0m:    [12-01-2026 21:29:03] no such column: collections.topic
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    |     return await future
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    |     result = context.run(func, *args)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    |     return self._api.list_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    |     db_collections = self._sysdb.get_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    |     rows = cur.execute(sql, params).fetchall()
+    | sqlite3.OperationalError: no such column: collections.topic
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    return self._api.list_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    db_collections = self._sysdb.get_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    rows = cur.execute(sql, params).fetchall()
+sqlite3.OperationalError: no such column: collections.topic
+[32mINFO[0m:     [12-01-2026 21:29:03] ::1:50438 - "GET /api/v1/collections HTTP/1.1" 500
+[31mERROR[0m:    [12-01-2026 21:29:17] no such column: collections.topic
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    |     return await future
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    |     result = context.run(func, *args)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    |     return self._api.list_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    |     db_collections = self._sysdb.get_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    |     rows = cur.execute(sql, params).fetchall()
+    | sqlite3.OperationalError: no such column: collections.topic
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    return self._api.list_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    db_collections = self._sysdb.get_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    rows = cur.execute(sql, params).fetchall()
+sqlite3.OperationalError: no such column: collections.topic
+[32mINFO[0m:     [12-01-2026 21:29:17] ::1:53067 - "GET /api/v1/collections HTTP/1.1" 500
+[31mERROR[0m:    [12-01-2026 21:29:26] no such column: collections.topic
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    |     return await call_next(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    |     return await future
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    |     result = context.run(func, *args)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    |     return self._api.list_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    |     db_collections = self._sysdb.get_collections(
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    |     return f(*args, **kwargs)
+    |   File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    |     rows = cur.execute(sql, params).fetchall()
+    | sqlite3.OperationalError: no such column: collections.topic
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 82, in catch_exceptions_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 96, in check_http_version_middleware
+    return await call_next(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\auth\fastapi.py", line 241, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\server\fastapi\__init__.py", line 376, in list_collections
+    return self._api.list_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\api\segment.py", line 273, in list_collections
+    db_collections = self._sysdb.get_collections(
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Users\toang\AppData\Local\Programs\Python\Python310\lib\site-packages\chromadb\db\mixins\sysdb.py", line 435, in get_collections
+    rows = cur.execute(sql, params).fetchall()
+sqlite3.OperationalError: no such column: collections.topic
+[32mINFO[0m:     [12-01-2026 21:29:26] ::1:53069 - "GET /api/v1/collections HTTP/1.1" 500
+[32mINFO[0m:     [12-01-2026 21:33:18] Shutting down
+[32mINFO[0m:     [12-01-2026 21:33:18] Waiting for application shutdown.
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component System
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component SegmentAPI
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:33:18] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [12-01-2026 21:33:18] Application shutdown complete.
+[32mINFO[0m:     [12-01-2026 21:33:18] Finished server process [[36m4696[0m]
+[33mWARNING[0m:  [12-01-2026 21:34:05] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-01-2026 21:34:06] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component System
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:34:06] Starting component SegmentAPI
+[32mINFO[0m:     [12-01-2026 21:34:06] Started server process [[36m15048[0m]
+[32mINFO[0m:     [12-01-2026 21:34:06] Waiting for application startup.
+[32mINFO[0m:     [12-01-2026 21:34:06] Application startup complete.
+[32mINFO[0m:     [12-01-2026 21:34:06] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [12-01-2026 21:34:31] ::1:53121 - "GET /api/v1/collections HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:34:31] ::1:53121 - "POST /api/v1/collections HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:38:25] ::1:49206 - "GET /api/v1/collections HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:42:01] ::1:64954 - "GET /api/v1/collections HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:45:05] Shutting down
+[32mINFO[0m:     [12-01-2026 21:45:05] Waiting for application shutdown.
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component System
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component SegmentAPI
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:45:05] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [12-01-2026 21:45:05] Application shutdown complete.
+[32mINFO[0m:     [12-01-2026 21:45:05] Finished server process [[36m15048[0m]
+[33mWARNING[0m:  [12-01-2026 21:45:30] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-01-2026 21:45:30] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component System
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:45:30] Starting component SegmentAPI
+[32mINFO[0m:     [12-01-2026 21:45:30] Started server process [[36m25208[0m]
+[32mINFO[0m:     [12-01-2026 21:45:30] Waiting for application startup.
+[32mINFO[0m:     [12-01-2026 21:45:30] Application startup complete.
+[32mINFO[0m:     [12-01-2026 21:45:30] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [12-01-2026 21:46:49] Shutting down
+[32mINFO[0m:     [12-01-2026 21:46:49] Waiting for application shutdown.
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component System
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component SegmentAPI
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:46:49] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [12-01-2026 21:46:49] Application shutdown complete.
+[32mINFO[0m:     [12-01-2026 21:46:49] Finished server process [[36m25208[0m]
+[33mWARNING[0m:  [12-01-2026 21:47:14] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-01-2026 21:47:14] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component System
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component Posthog
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 21:47:14] Starting component SegmentAPI
+[32mINFO[0m:     [12-01-2026 21:47:14] Started server process [[36m28132[0m]
+[32mINFO[0m:     [12-01-2026 21:47:14] Waiting for application startup.
+[32mINFO[0m:     [12-01-2026 21:47:14] Application startup complete.
+[32mINFO[0m:     [12-01-2026 21:47:14] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [12-01-2026 21:50:38] ::1:57015 - "GET /api/v1/collections HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:54:11] ::1:58026 - "GET /api/v1/collections HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:56:52] ::1:61539 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [12-01-2026 21:56:53] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [12-01-2026 21:56:53] ::1:61539 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:57:04] ::1:64754 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:57:05] ::1:64754 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [12-01-2026 21:57:27] Number of requested results 6 is greater than number of elements in index 1, updating n_results = 1
+[32mINFO[0m:     [12-01-2026 21:57:27] ::1:53551 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:57:28] ::1:53551 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [12-01-2026 21:57:41] Number of requested results 6 is greater than number of elements in index 2, updating n_results = 2
+[32mINFO[0m:     [12-01-2026 21:57:41] ::1:54769 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 21:57:43] ::1:54769 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [12-01-2026 22:00:22] Number of requested results 6 is greater than number of elements in index 3, updating n_results = 3
+[32mINFO[0m:     [12-01-2026 22:00:22] ::1:49677 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 22:00:23] ::1:49677 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [12-01-2026 22:00:36] Number of requested results 6 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [12-01-2026 22:00:36] ::1:64660 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 22:00:37] ::1:64660 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [12-01-2026 22:00:54] Number of requested results 6 is greater than number of elements in index 5, updating n_results = 5
+[32mINFO[0m:     [12-01-2026 22:00:54] ::1:59636 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 22:00:55] ::1:59636 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [12-01-2026 22:01:03] ::1:59982 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [12-01-2026 22:01:05] ::1:59982 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [12-01-2026 22:12:41] Shutting down
+[32mINFO[0m:     [12-01-2026 22:12:41] Waiting for application shutdown.
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component System
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component SegmentAPI
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component Posthog
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 22:12:41] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [12-01-2026 22:12:41] Application shutdown complete.
+[32mINFO[0m:     [12-01-2026 22:12:41] Finished server process [[36m28132[0m]
+[33mWARNING[0m:  [12-01-2026 22:22:12] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [12-01-2026 22:22:12] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component System
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component SqliteDB
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component Posthog
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [12-01-2026 22:22:12] Starting component SegmentAPI
+[32mINFO[0m:     [12-01-2026 22:22:12] Started server process [[36m11284[0m]
+[32mINFO[0m:     [12-01-2026 22:22:12] Waiting for application startup.
+[32mINFO[0m:     [12-01-2026 22:22:12] Application startup complete.
+[32mINFO[0m:     [12-01-2026 22:22:12] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[33mWARNING[0m:  [13-01-2026 09:12:53] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [13-01-2026 09:12:54] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component System
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component SqliteDB
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component Posthog
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [13-01-2026 09:12:54] Starting component SegmentAPI
+[32mINFO[0m:     [13-01-2026 09:12:54] Started server process [[36m20944[0m]
+[32mINFO[0m:     [13-01-2026 09:12:54] Waiting for application startup.
+[32mINFO[0m:     [13-01-2026 09:12:54] Application startup complete.
+[32mINFO[0m:     [13-01-2026 09:12:54] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [13-01-2026 09:14:24] ::1:58231 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [13-01-2026 09:14:25] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [13-01-2026 09:14:25] ::1:58231 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-01-2026 09:14:27] ::1:58231 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [13-01-2026 09:16:01] ::1:64156 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-01-2026 09:16:08] ::1:55650 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [23-01-2026 15:44:12] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [23-01-2026 15:44:12] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [23-01-2026 15:44:12] Starting component System
+[36mDEBUG[0m:    [23-01-2026 15:44:12] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [23-01-2026 15:44:12] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [23-01-2026 15:44:12] Starting component SqliteDB
+[36mDEBUG[0m:    [23-01-2026 15:44:13] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [23-01-2026 15:44:13] Starting component Posthog
+[36mDEBUG[0m:    [23-01-2026 15:44:13] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [23-01-2026 15:44:13] Starting component SegmentAPI
+[32mINFO[0m:     [23-01-2026 15:44:13] Started server process [[36m31508[0m]
+[32mINFO[0m:     [23-01-2026 15:44:13] Waiting for application startup.
+[32mINFO[0m:     [23-01-2026 15:44:13] Application startup complete.
+[32mINFO[0m:     [23-01-2026 15:44:13] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [23-01-2026 16:08:18] ::1:63131 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [23-01-2026 16:08:19] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [23-01-2026 16:08:19] ::1:63131 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 16:08:46] ::1:58809 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [23-01-2026 16:09:45] ::1:53449 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 16:09:47] ::1:53449 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [23-01-2026 16:16:35] ::1:62053 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 16:16:44] ::1:62056 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [23-01-2026 21:00:32] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [23-01-2026 21:00:32] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component System
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component SqliteDB
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component Posthog
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [23-01-2026 21:00:32] Starting component SegmentAPI
+[32mINFO[0m:     [23-01-2026 21:00:32] Started server process [[36m32096[0m]
+[32mINFO[0m:     [23-01-2026 21:00:32] Waiting for application startup.
+[32mINFO[0m:     [23-01-2026 21:00:32] Application startup complete.
+[32mINFO[0m:     [23-01-2026 21:00:32] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[33mWARNING[0m:  [23-01-2026 21:08:29] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [23-01-2026 21:08:30] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component System
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component SqliteDB
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component Posthog
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [23-01-2026 21:08:30] Starting component SegmentAPI
+[32mINFO[0m:     [23-01-2026 21:08:30] Started server process [[36m23056[0m]
+[32mINFO[0m:     [23-01-2026 21:08:30] Waiting for application startup.
+[32mINFO[0m:     [23-01-2026 21:08:30] Application startup complete.
+[32mINFO[0m:     [23-01-2026 21:08:30] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [23-01-2026 21:09:24] ::1:57245 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [23-01-2026 21:09:25] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [23-01-2026 21:09:25] ::1:57245 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 21:09:42] ::1:52349 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 21:09:45] ::1:52349 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [23-01-2026 21:11:12] ::1:56930 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 21:11:14] ::1:56930 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [23-01-2026 21:11:34] ::1:55983 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 21:11:37] ::1:55983 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [23-01-2026 21:12:35] ::1:52325 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-01-2026 21:12:38] ::1:52325 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [13-02-2026 23:16:42] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [13-02-2026 23:16:42] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component System
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component SqliteDB
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component Posthog
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [13-02-2026 23:16:42] Starting component SegmentAPI
+[32mINFO[0m:     [13-02-2026 23:16:42] Started server process [[36m27160[0m]
+[32mINFO[0m:     [13-02-2026 23:16:42] Waiting for application startup.
+[32mINFO[0m:     [13-02-2026 23:16:42] Application startup complete.
+[32mINFO[0m:     [13-02-2026 23:16:42] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [13-02-2026 23:18:43] ::1:59141 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [13-02-2026 23:18:44] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [13-02-2026 23:18:44] ::1:59141 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-02-2026 23:19:06] ::1:55447 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[32mINFO[0m:     [13-02-2026 23:19:34] ::1:64425 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-02-2026 23:19:53] ::1:65428 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-02-2026 23:23:55] ::1:61403 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-02-2026 23:31:34] ::1:59952 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [13-02-2026 23:32:31] ::1:65255 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[33mWARNING[0m:  [15-02-2026 10:51:20] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [15-02-2026 10:51:20] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component System
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component SqliteDB
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component Posthog
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [15-02-2026 10:51:20] Starting component SegmentAPI
+[32mINFO[0m:     [15-02-2026 10:51:21] Started server process [[36m7596[0m]
+[32mINFO[0m:     [15-02-2026 10:51:21] Waiting for application startup.
+[32mINFO[0m:     [15-02-2026 10:51:21] Application startup complete.
+[32mINFO[0m:     [15-02-2026 10:51:21] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [15-02-2026 10:53:00] ::1:53591 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [15-02-2026 10:53:01] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [15-02-2026 10:53:01] ::1:53591 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [15-02-2026 11:01:59] ::1:49714 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [15-02-2026 11:02:08] ::1:58680 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[33mWARNING[0m:  [21-02-2026 10:01:43] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [21-02-2026 10:01:43] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component System
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component SqliteDB
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component Posthog
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [21-02-2026 10:01:43] Starting component SegmentAPI
+[32mINFO[0m:     [21-02-2026 10:01:43] Started server process [[36m16344[0m]
+[32mINFO[0m:     [21-02-2026 10:01:43] Waiting for application startup.
+[32mINFO[0m:     [21-02-2026 10:01:43] Application startup complete.
+[32mINFO[0m:     [21-02-2026 10:01:43] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [21-02-2026 10:01:49] ::1:51499 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [21-02-2026 10:01:49] ::1:51499 - "GET /favicon.ico HTTP/1.1" 404
+[32mINFO[0m:     [21-02-2026 10:01:52] ::1:51499 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [21-02-2026 10:02:37] ::1:55679 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [21-02-2026 10:02:37] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [21-02-2026 10:02:37] ::1:55679 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 10:03:46] ::1:59498 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 10:04:25] ::1:60450 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 10:05:16] ::1:54583 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 10:05:25] ::1:50318 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 10:05:41] ::1:55201 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 10:05:54] ::1:58811 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [21-02-2026 17:35:04] ::1:64996 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[33mWARNING[0m:  [23-02-2026 10:43:01] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [23-02-2026 10:43:01] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component System
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component SqliteDB
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component Posthog
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [23-02-2026 10:43:01] Starting component SegmentAPI
+[32mINFO[0m:     [23-02-2026 10:43:01] Started server process [[36m10020[0m]
+[32mINFO[0m:     [23-02-2026 10:43:01] Waiting for application startup.
+[32mINFO[0m:     [23-02-2026 10:43:01] Application startup complete.
+[32mINFO[0m:     [23-02-2026 10:43:01] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [23-02-2026 10:44:56] ::1:62882 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [23-02-2026 10:44:57] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [23-02-2026 10:44:57] ::1:62882 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-02-2026 10:48:35] ::1:56772 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-02-2026 10:48:58] ::1:54680 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-02-2026 10:52:24] ::1:62860 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [23-02-2026 10:53:45] Shutting down
+[32mINFO[0m:     [23-02-2026 10:53:45] Waiting for application shutdown.
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component System
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component SegmentAPI
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component Posthog
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component SqliteDB
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [23-02-2026 10:53:45] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [23-02-2026 10:53:45] Application shutdown complete.
+[32mINFO[0m:     [23-02-2026 10:53:45] Finished server process [[36m10020[0m]
+[33mWARNING[0m:  [24-02-2026 09:34:07] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 09:34:07] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component System
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 09:34:07] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 09:34:07] Started server process [[36m12116[0m]
+[32mINFO[0m:     [24-02-2026 09:34:07] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 09:34:07] Application startup complete.
+[32mINFO[0m:     [24-02-2026 09:34:07] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 09:39:33] Shutting down
+[32mINFO[0m:     [24-02-2026 09:39:33] Waiting for application shutdown.
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component System
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component SegmentAPI
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component Posthog
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 09:39:33] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [24-02-2026 09:39:33] Application shutdown complete.
+[32mINFO[0m:     [24-02-2026 09:39:33] Finished server process [[36m12116[0m]
+[33mWARNING[0m:  [24-02-2026 09:39:44] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 09:39:44] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component System
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 09:39:44] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 09:39:45] Started server process [[36m21620[0m]
+[32mINFO[0m:     [24-02-2026 09:39:45] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 09:39:45] Application startup complete.
+[32mINFO[0m:     [24-02-2026 09:39:45] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 09:59:14] ::1:60705 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [24-02-2026 09:59:14] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [24-02-2026 09:59:14] ::1:60705 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [24-02-2026 10:28:47] Shutting down
+[32mINFO[0m:     [24-02-2026 10:28:47] Waiting for application shutdown.
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component System
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component SegmentAPI
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:28:47] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [24-02-2026 10:28:47] Application shutdown complete.
+[32mINFO[0m:     [24-02-2026 10:28:47] Finished server process [[36m21620[0m]
+[33mWARNING[0m:  [24-02-2026 10:28:59] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 10:28:59] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component System
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:28:59] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 10:28:59] Started server process [[36m29576[0m]
+[32mINFO[0m:     [24-02-2026 10:28:59] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 10:28:59] Application startup complete.
+[32mINFO[0m:     [24-02-2026 10:28:59] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 10:29:57] Shutting down
+[32mINFO[0m:     [24-02-2026 10:29:57] Waiting for application shutdown.
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component System
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component SegmentAPI
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:29:57] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [24-02-2026 10:29:57] Application shutdown complete.
+[32mINFO[0m:     [24-02-2026 10:29:57] Finished server process [[36m29576[0m]
+[33mWARNING[0m:  [24-02-2026 10:30:06] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 10:30:06] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component System
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:30:06] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 10:30:06] Started server process [[36m5620[0m]
+[32mINFO[0m:     [24-02-2026 10:30:06] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 10:30:06] Application startup complete.
+[32mINFO[0m:     [24-02-2026 10:30:06] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 10:31:05] ::1:56282 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [24-02-2026 10:31:05] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [24-02-2026 10:31:05] ::1:56282 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [24-02-2026 10:31:18] Shutting down
+[32mINFO[0m:     [24-02-2026 10:31:18] Waiting for application shutdown.
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component System
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component SegmentAPI
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:31:18] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [24-02-2026 10:31:18] Application shutdown complete.
+[32mINFO[0m:     [24-02-2026 10:31:18] Finished server process [[36m5620[0m]
+[33mWARNING[0m:  [24-02-2026 10:31:30] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 10:31:30] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component System
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:31:30] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 10:31:30] Started server process [[36m248[0m]
+[32mINFO[0m:     [24-02-2026 10:31:30] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 10:31:30] Application startup complete.
+[32mINFO[0m:     [24-02-2026 10:31:30] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 10:32:02] ::1:50858 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [24-02-2026 10:32:02] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [24-02-2026 10:32:02] ::1:50858 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[32mINFO[0m:     [24-02-2026 10:32:23] ::1:50866 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/add HTTP/1.1" 201
+[33mWARNING[0m:  [24-02-2026 10:43:36] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 10:43:36] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component System
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:43:36] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 10:43:37] Started server process [[36m18736[0m]
+[32mINFO[0m:     [24-02-2026 10:43:37] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 10:43:37] Application startup complete.
+[32mINFO[0m:     [24-02-2026 10:43:37] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 10:53:26] Shutting down
+[32mINFO[0m:     [24-02-2026 10:53:26] Waiting for application shutdown.
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component System
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component SegmentAPI
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:53:26] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [24-02-2026 10:53:26] Application shutdown complete.
+[32mINFO[0m:     [24-02-2026 10:53:26] Finished server process [[36m18736[0m]
+[33mWARNING[0m:  [24-02-2026 10:53:29] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 10:53:29] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component System
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 10:53:29] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 10:53:29] Started server process [[36m10232[0m]
+[32mINFO[0m:     [24-02-2026 10:53:29] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 10:53:29] Application startup complete.
+[32mINFO[0m:     [24-02-2026 10:53:29] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 10:58:37] ::1:54084 - "GET /api/v1/collections HTTP/1.1" 200
+[36mDEBUG[0m:    [24-02-2026 10:58:38] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [24-02-2026 10:58:38] ::1:54084 - "POST /api/v1/collections/3fdccc2d-6013-42ba-b72c-17cd56386751/query HTTP/1.1" 200
+[33mWARNING[0m:  [24-02-2026 12:05:15] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 12:05:15] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component System
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 12:05:15] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 12:05:15] Started server process [[36m25240[0m]
+[32mINFO[0m:     [24-02-2026 12:05:15] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 12:05:15] Application startup complete.
+[32mINFO[0m:     [24-02-2026 12:05:15] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)

@@ -1,0 +1,60 @@
+
+  // Handle Booking Form Submission
+  const handleBookingSubmit = async (data: BookingRequest) => {
+    setIsBookingFormVisible(false); // Hide form
+    setLoading(true);
+    setShowWelcome(false); // Hide welcome screen
+
+    const textToSend = `Yêu cầu đặt phòng: ${data.tripDetails.destination}, ${data.tripDetails.numberOfGuests} khách.`;
+
+    // Add user message clearly showing the intent
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      content: `📋 **Phiếu Đặt Phòng Đã Gửi:**\n- Điểm đến: ${data.tripDetails.destination}\n- Ngày: ${(data.tripDetails.checkInDate) ? dayjs(data.tripDetails.checkInDate).format('DD/MM') : '...'} - ${(data.tripDetails.checkOutDate) ? dayjs(data.tripDetails.checkOutDate).format('DD/MM') : '...'}\n- Ngân sách: ${data.tripDetails.budgetMinPerNight?.toLocaleString()} - ${data.tripDetails.budgetMaxPerNight?.toLocaleString()} VND\n\nAgent hãy giúp tôi tìm phòng ngay!`,
+      sender: 'user',
+      timestamp: new Date()
+    };
+    setMessages(prev => [...prev, userMessage]);
+
+    // Create Session if needed
+    let currentSessionId = sessionId;
+    if (!currentSessionId && user?.id) {
+      try {
+        const newSession = await chatService.createSession(user.id, `Đặt phòng: ${data.tripDetails.destination}`);
+        currentSessionId = newSession.id;
+        navigate(`/chat/${currentSessionId}`, { replace: true });
+      } catch (error) {
+        console.error('Failed to create session:', error);
+      }
+    }
+
+    try {
+      // Send to AI with Booking Context
+      const request: ChatRequest = {
+        message: textToSend,
+        language: 'vi',
+        context: {
+          userId: user?.id,
+          sessionId: currentSessionId,
+          bookingRequest: data // Attach structured data
+        }
+      };
+
+      const response = await chatService.sendMessage(request);
+
+      const botMessage: Message = {
+        id: Date.now().toString(),
+        content: response.content,
+        sender: 'assistant',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, botMessage]);
+
+    } catch (error) {
+      console.error('Booking Error:', error);
+      message.error('Lỗi khi gửi yêu cầu đặt phòng');
+    } finally {
+      setLoading(false);
+      setSelectedTool(null); // Reset tool to return to chat mode
+    }
+  };
