@@ -1135,3 +1135,43 @@ sqlite3.OperationalError: no such column: collections.topic
 [32mINFO[0m:     [24-02-2026 12:05:15] Waiting for application startup.
 [32mINFO[0m:     [24-02-2026 12:05:15] Application startup complete.
 [32mINFO[0m:     [24-02-2026 12:05:15] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [24-02-2026 12:38:05] Shutting down
+[32mINFO[0m:     [24-02-2026 12:38:05] Waiting for application shutdown.
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component System
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component SegmentAPI
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component Posthog
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 12:38:05] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [24-02-2026 12:38:05] Application shutdown complete.
+[32mINFO[0m:     [24-02-2026 12:38:05] Finished server process [[36m25240[0m]
+[33mWARNING[0m:  [24-02-2026 12:38:12] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 12:38:12] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 12:38:12] Starting component System
+[36mDEBUG[0m:    [24-02-2026 12:38:12] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 12:38:12] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 12:38:12] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 12:38:13] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 12:38:13] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 12:38:13] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 12:38:13] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 12:38:13] Started server process [[36m11816[0m]
+[32mINFO[0m:     [24-02-2026 12:38:13] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 12:38:13] Application startup complete.
+[32mINFO[0m:     [24-02-2026 12:38:13] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[33mWARNING[0m:  [24-02-2026 18:42:28] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [24-02-2026 18:42:28] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component System
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component SqliteDB
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component Posthog
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [24-02-2026 18:42:28] Starting component SegmentAPI
+[32mINFO[0m:     [24-02-2026 18:42:28] Started server process [[36m5556[0m]
+[32mINFO[0m:     [24-02-2026 18:42:28] Waiting for application startup.
+[32mINFO[0m:     [24-02-2026 18:42:28] Application startup complete.
+[32mINFO[0m:     [24-02-2026 18:42:28] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)

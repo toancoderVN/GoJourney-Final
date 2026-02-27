@@ -154,7 +154,7 @@ __decorate([
 ], UserProfileController.prototype, "getTravelHistory", null);
 exports.UserProfileController = UserProfileController = __decorate([
     (0, swagger_1.ApiTags)('user-profiles'),
-    (0, common_1.Controller)('api/v1/users'),
+    (0, common_1.Controller)('v1/users'),
     __metadata("design:paramtypes", [user_profile_service_1.UserProfileService])
 ], UserProfileController);
 //# sourceMappingURL=user-profile.controller.js.map

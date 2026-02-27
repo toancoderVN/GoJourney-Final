@@ -4,7 +4,7 @@ import { UserProfileService } from '../services/user-profile.service';
 import { CreateUserProfileDto, UpdateUserProfileDto, CreateTravelPreferenceDto } from '../dto/user.dto';
 
 @ApiTags('user-profiles')
-@Controller('api/v1/users')
+@Controller('v1/users')
 export class UserProfileController {
   constructor(private readonly userProfileService: UserProfileService) {}
 
